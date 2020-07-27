@@ -1,0 +1,17 @@
+class MyBalance():
+    def __init__(self,owner,balance):
+        self.owner=owner
+        self.balance=balance
+    def __str__(self):
+        
+        return f'Account owner:{self.owner} \nAccount balance:{self.balance}Tk'    
+    def deposit(self,value_added):
+        self.balance=self.balance + value_added
+        print('Tk added!')
+    def withdraw(self,value_deducted):
+        if self.balance>=value_deducted:
+            self.balance=self.balance-value_deducted
+            print('Withdraw Accepted!')
+        else:
+            print('Sorry, your current balance is lower than the amount of money you want to withdraw.')
+            
